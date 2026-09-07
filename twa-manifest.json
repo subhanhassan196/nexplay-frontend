@@ -1,0 +1,40 @@
+{
+  "packageId": "online.thisismyweb.nexplay",
+  "host": "thisismyweb.online",
+  "name": "NexPlay",
+  "launcherName": "NexPlay",
+  "display": "standalone",
+  "themeColor": "#7C3AED",
+  "themeColorDark": "#09090B",
+  "navigationColor": "#09090B",
+  "navigationColorDark": "#09090B",
+  "navigationDividerColor": "#09090B",
+  "navigationDividerColorDark": "#09090B",
+  "backgroundColor": "#09090B",
+  "enableNotifications": true,
+  "startUrl": "/",
+  "iconUrl": "https://thisismyweb.online/icons/icon-512.png",
+  "maskableIconUrl": "https://thisismyweb.online/icons/icon-maskable-512.png",
+  "splashScreenFadeOutDuration": 300,
+  "signingKey": {
+    "path": "./android.keystore",
+    "alias": "nexplay"
+  },
+  "appVersionName": "1.0.0",
+  "appVersionCode": 1,
+  "shortcuts": [
+    { "name": "Games", "shortName": "Games", "url": "/games", "chosenIconUrl": "https://thisismyweb.online/icons/icon-192.png" },
+    { "name": "Support", "shortName": "Support", "url": "/dashboard", "chosenIconUrl": "https://thisismyweb.online/icons/icon-192.png" }
+  ],
+  "generatorApp": "bubblewrap-cli",
+  "webManifestUrl": "https://thisismyweb.online/manifest.json",
+  "fallbackType": "customtabs",
+  "features": {},
+  "alphaDependencies": { "enabled": false },
+  "enableSiteSettingsShortcut": true,
+  "isChromeOSOnly": false,
+  "isMetaQuest": false,
+  "fullScopeUrl": "https://thisismyweb.online/",
+  "minSdkVersion": 23,
+  "orientation": "portrait"
+}

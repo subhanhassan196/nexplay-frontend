@@ -1,0 +1,101 @@
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+:root {
+  --background: #09090b;
+  --surface: #121212;
+  --primary: #7c3aed;
+  --secondary: #06b6d4;
+  --accent: #f59e0b;
+  --success: #22c55e;
+  --danger: #ef4444;
+
+  --header-height: 76px;
+  --container-padding: clamp(1rem, 4vw, 3rem);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: #f4f4f5;
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+  background: #232328;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7c3aed;
+}
+
+::selection {
+  background: rgba(124, 58, 237, 0.35);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid #7c3aed;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@layer components {
+  .glass {
+    @apply bg-surface/60 backdrop-blur-xl border border-white/[0.08];
+  }
+
+  .glass-panel {
+    @apply bg-surface/60 backdrop-blur-xl border border-white/[0.08] rounded-2xl shadow-glass;
+  }
+
+  .text-gradient {
+    @apply bg-nexplay-gradient bg-clip-text text-transparent;
+  }
+
+  .container-nexplay {
+    @apply mx-auto w-full max-w-8xl px-[var(--container-padding)];
+  }
+
+  .neon-border {
+    @apply border border-primary/40 shadow-glow-primary;
+  }
+
+  .section-padding {
+    @apply py-20 md:py-28;
+  }
+
+  .admin-action-btn {
+    @apply flex h-9 w-9 items-center justify-center rounded-lg text-muted transition-colors hover:bg-white/5 hover:text-white;
+  }
+
+  .search-item {
+    @apply flex flex-col gap-0.5 rounded-lg px-2 py-2 transition-colors hover:bg-white/5;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
